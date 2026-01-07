@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/plantMachinery.css";
+import "../styles/plant.css";
 
 import plantMain from "../assets/hero/rkslide-2.webp";
 import pumpImg from "../assets/hero/rkslide-8.jpeg";
