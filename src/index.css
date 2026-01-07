@@ -1,0 +1,52 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root variables */
+:root {
+  --primary-color: #1f2933;
+  --secondary-color: #f59e0b;
+  --text-color: #ffffff;
+  --light-bg: #f4f4f4;
+ scroll-padding-top: 90px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Anchor */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Remove default list styles */
+ul {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}

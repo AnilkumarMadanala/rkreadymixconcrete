@@ -1,0 +1,18 @@
+/* App wrapper */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Section spacing (temporary) */
+section {
+  padding: 80px 40px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+}
