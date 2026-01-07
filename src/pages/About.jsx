@@ -110,7 +110,7 @@ const About = () => {
       {/* STATS */}
       <div className="about-stats">
         <div className="stat">
-          <h3>250+</h3>
+          <h3>300+</h3>
           <p>Projects Completed</p>
         </div>
         <div className="stat">
