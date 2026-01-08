@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 40px;
-  background-color: #1f2933;
+  background-color: #ffffff;
   z-index: 9999;
 }
 
@@ -20,8 +20,42 @@ body {
 
 /* LOGO */
 .navbar-logo img {
-  height: 55px;
+  height: 75px;              /* 🔥 reduce height */
+  width: auto;
+  display: block;            /* removes inline gap */
+  object-fit: contain;
 }
+.navbar-logo a {
+  display: flex;
+  align-items: center;       /* ✅ vertical center */
+  justify-content: flex-start;
+  gap: 12px;
+  height: 100%;
+  text-decoration: none;
+}
+
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* ✅ center text vertically */
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d2d2d;
+}
+
+.logo-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
+
+
 
 /* LINKS (DESKTOP) */
 .navbar-links {
@@ -31,7 +65,7 @@ body {
 }
 
 .navbar-links li a {
-  color: #ffffff;
+  color: #1f2933;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
@@ -62,7 +96,7 @@ body {
 .hamburger span {
   width: 26px;
   height: 3px;
-  background: #ffffff;
+  background: #1f2933;
   transition: 0.3s ease;
 }
 
@@ -76,6 +110,15 @@ body {
   .navbar {
     padding: 12px 20px;
   }
+  .navbar-logo img {
+    height: 75px;
+  }
+   .logo-title {
+    font-size: 18px;
+  }
+   .logo-subtitle {
+    font-size: 11px;
+  }
 
   /* MOBILE MENU */
   .navbar-links {
@@ -83,7 +126,7 @@ body {
     top: 78px;
     left: 0;
     width: 100%;
-    background: #1f2933;
+    background: #ffffff;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -108,7 +151,7 @@ body {
   }
 
   .mobile-call a {
-    background: #ffffff;
+    background: #e1dada;
     color: #1f2933;
     padding: 8px 10px;
     border-radius: 50%;

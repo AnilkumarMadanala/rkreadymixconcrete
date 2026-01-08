@@ -10,11 +10,17 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* LOGO */}
-      <div className="navbar-logo">
-        <a href="#home" onClick={closeMenu}>
-          <img src={logo} alt="RK Ready Mix Concrete" />
-        </a>
-      </div>
+   <div className="navbar-logo">
+  <a href="#home" onClick={closeMenu}>
+    <img src={logo} alt="RK Ready Mix Concrete" />
+    <div className="logo-text">
+      <span className="logo-title">RK RMC</span>
+      <span className="logo-subtitle">VIZIANAGARAM</span>
+    </div>
+  </a>
+</div>
+
+
 
       {/* NAV LINKS */}
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
