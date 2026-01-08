@@ -26,14 +26,14 @@ const Footer = () => {
             <a href="tel:8977011173" className="call-btn">
               <FaPhoneAlt /> Call Now
             </a>
-            {/* <a
+            <a
               href="https://wa.me/918977011173"
               target="_blank"
               rel="noreferrer"
               className="whatsapp-btn"
             >
               <FaWhatsapp /> WhatsApp
-            </a> */}
+            </a>
           </div>
         </div>
 

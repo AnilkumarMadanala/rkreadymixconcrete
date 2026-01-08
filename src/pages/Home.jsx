@@ -145,7 +145,7 @@ return (
         </button>
 
         <a
-          href="https://wa.me/919676760263?text=Hi%20RK%20RMC!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          href="https://wa.me/918977011173?text=Hi%20RK%20RMC!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
           target="_blank"
           className="whatsapp-btn"
           rel="noreferrer"
