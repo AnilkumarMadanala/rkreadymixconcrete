@@ -23,11 +23,11 @@ const Footer = () => {
           </p>
 
           <div className="footer-actions">
-            <a href="tel:8977011172" className="call-btn">
+            <a href="tel:8977011173" className="call-btn">
               <FaPhoneAlt /> Call Now
             </a>
             {/* <a
-              href="https://wa.me/918977011172"
+              href="https://wa.me/918977011173"
               target="_blank"
               rel="noreferrer"
               className="whatsapp-btn"
@@ -68,8 +68,8 @@ const Footer = () => {
             <FaMapMarkerAlt /> Jonnada, Bodametlapalem, <br />
             Andhra Pradesh – 531162
           </p>
-          <p><FaPhoneAlt /> 8977011172</p>
           <p><FaPhoneAlt /> 8977011173</p>
+          <p><FaPhoneAlt /> 8977011172</p>
 
           <div className="social-icons">
             <a href="#"><FaFacebookF /></a>

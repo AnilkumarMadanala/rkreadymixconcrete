@@ -35,6 +35,7 @@ const slides = [
 
 const Home = () => {
   const [current, setCurrent] = useState(0);
+    const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,6 +49,26 @@ const Home = () => {
 
   const prevSlide = () =>
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const phone = e.target.phone.value;
+    const location = e.target.location.value;
+    const requirement = e.target.requirement.value;
+
+    const message = `*Free Site Visit Request*%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Location: ${location}%0A
+Requirement: ${requirement}`;
+
+    window.open(
+      `https://wa.me/918977011173?text=${message}`,
+      "_blank"
+    );
+  };
 
   return (
     <section className="hero" id="home">
@@ -112,7 +133,52 @@ const Home = () => {
       <div className="supply-item">🛣️ CC Roads</div>
     </div>
   </div>
+
+  
 </section>
+return (
+    <>
+      {/* FLOATING BUTTONS */}
+      <div className="floating-buttons">
+        <button className="site-visit-btn" onClick={() => setOpen(true)}>
+          🏗️ Free Site Visit
+        </button>
+
+        <a
+          href="https://wa.me/919676760263?text=Hi%20RK%20RMC!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          target="_blank"
+          className="whatsapp-btn"
+          rel="noreferrer"
+        >
+          💬 WhatsApp
+        </a>
+      </div>
+
+      {/* SITE VISIT FORM */}
+      {open && (
+        <div className="site-visit-overlay">
+          <div className="site-visit-form">
+            <h3>Free Site Visit</h3>
+
+            <form onSubmit={handleSubmit}>
+              <input name="name" placeholder="Your Name" required />
+              <input name="phone" placeholder="Phone Number" required />
+              <input name="location" placeholder="Site Location" required />
+              <textarea
+                name="requirement"
+                placeholder="Your Requirement"
+                required
+              ></textarea>
+
+              <button type="submit">Submit to WhatsApp</button>
+              <span onClick={() => setOpen(false)}>Cancel</span>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
+  );
+
       
     </section>
     

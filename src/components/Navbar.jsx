@@ -33,12 +33,12 @@ const Navbar = () => {
 
       {/* CALL BUTTON - DESKTOP */}
       <div className="navbar-call desktop-call">
-        <a href="tel:8977011172">📞 Call Now</a>
+        <a href="tel:8977011173">📞 Call Now</a>
       </div>
 
       {/* CALL ICON - MOBILE */}
       <div className="navbar-call mobile-call">
-        <a href="tel:8977011172">📞</a>
+        <a href="tel:8977011173">📞</a>
       </div>
 
       {/* HAMBURGER */}
