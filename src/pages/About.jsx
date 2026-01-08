@@ -82,6 +82,19 @@ const clientNames = [
       "Sri Gayatri Builders",
       "Gayatri College (Gotlam)"
 ];
+const reviews = [
+  { name: "Sri Venkateswara Temple", rating: 5, comment: "Excellent quality concrete and timely delivery." },
+  { name: "MVGR College", rating: 5, comment: "Very professional service and strong concrete quality." },
+  { name: "Lendi Institute", rating: 4, comment: "Reliable supply and good coordination." },
+  { name: "Raghu Rama Infra", rating: 5, comment: "Best RMC supplier in Vizianagaram." },
+  { name: "Pentapati Vijaya Ramayya", rating: 4, comment: "Quality meets expectations every time." },
+  { name: "BLR Constructions", rating: 5, comment: "Consistent mix and punctual delivery." },
+  { name: "Bhoomatha Group", rating: 4, comment: "Good pricing and strong support team." },
+  { name: "Skyline Developers", rating: 5, comment: "Highly recommended for large projects." },
+  { name: "SVB Mall", rating: 5, comment: "Professional batching plant and service." },
+  { name: "Gayatri College", rating: 4, comment: "Satisfied with strength and finishing." }
+];
+
 
 const About = () => {
   return (
@@ -144,10 +157,30 @@ const About = () => {
         <div className="client-scroll-item" key={index}>
           {name}
         </div>
+        
       ))}
     </div>
   </div>
+  {/* CUSTOMER REVIEWS SCROLLER */}
+<div className="reviews-scroller">
+  <div className="reviews-track">
+    {reviews.concat(reviews).map((review, index) => (
+      <div className="review-item" key={index}>
+        <h4>{review.name}</h4>
+
+        <div className="review-stars">
+          {"★".repeat(review.rating)}
+          {"☆".repeat(5 - review.rating)}
+        </div>
+
+        <p>{review.comment}</p>
+      </div>
+    ))}
+  </div>
 </div>
+
+</div>
+
 
     </section>
   );
