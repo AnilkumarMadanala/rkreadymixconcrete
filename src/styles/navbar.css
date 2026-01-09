@@ -35,24 +35,83 @@ body {
 }
 
 
+
 .logo-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* ✅ center text vertically */
-  line-height: 1.1;
+  line-height: 1.05;
+  animation: logoFadeSlide 0.9s ease-out forwards;
 }
 
+/* MAIN TITLE */
 .logo-title {
-  font-size: 22px;
-  font-weight: 800;
-  color: #33c67c;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #16a34a;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.12);
+
+  opacity: 0;
+  animation: titlePop 0.8s ease-out forwards;
+  animation-delay: 0.2s;
 }
+
 
 .logo-subtitle {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 2px;
   color: #f59e0b;
-  letter-spacing: 1px;
+  margin-top: 2px;
+
+  opacity: 0;
+  animation: subtitleFade 0.8s ease-out forwards;
+  animation-delay: 0.45s;
+}
+
+
+/* OPTIONAL – subtle underline feel */
+.logo-title::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: #f59e0b;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+@keyframes logoFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes titlePop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes subtitleFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -113,11 +172,13 @@ body {
   .navbar-logo img {
     height: 75px;
   }
-   .logo-title {
-    font-size: 18px;
+     .logo-title {
+    font-size: 20px;
   }
-   .logo-subtitle {
+
+  .logo-subtitle {
     font-size: 11px;
+    letter-spacing: 1.5px;
   }
 
   /* MOBILE MENU */
